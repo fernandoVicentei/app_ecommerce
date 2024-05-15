@@ -19,7 +19,6 @@ Future<List<String>> getVisiteds() async {
 Future<void> saveVisiteds(String clotheId) async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   List<String> visitedProducts = prefs.getStringList('visited_products_clothes') ?? [];
-  print(visitedProducts.toString());
   if (!visitedProducts.contains(clotheId)) {
     visitedProducts.insert(0, clotheId);
     if (visitedProducts.length > 5) {

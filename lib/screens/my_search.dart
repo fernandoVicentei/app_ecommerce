@@ -31,8 +31,6 @@ class _MySearchState extends State<MySearch> {
       var response = await api.getProduct(int.parse(id));
       listLocal.add(response);
     }
-    print("Cantidad de items : " + listLocal.length.toString());
-    print("Nombre de items : " + listLocal[0].title.toString());
     setState(() {
       listVisited = listLocal;
     });
@@ -132,7 +130,7 @@ class _MySearchState extends State<MySearch> {
                                 ),
                               ),
                               subtitle: Text(
-                                '${showList[index].price!}',
+                                'Bs. ${showList[index].price!}',
                                 style: const TextStyle(
                                   color: Colors.white60,
                                 ),

@@ -36,7 +36,7 @@ class UltimedVisited extends StatelessWidget {
                   ),
                 ),
                 subtitle: Text(
-                  '${visitedClothes[index].price!}',
+                  'Bs. ${visitedClothes[index].price!}',
                   style: const TextStyle(
                     color: Colors.white60,
                   ),
